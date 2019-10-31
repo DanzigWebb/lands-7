@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Умное косметическое зеркало с подсветкой</title>
+	<meta property="og:image" content="path/to/image.jpg">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,500,700,900&display=swap&subset=cyrillic"
+		rel="stylesheet">
+	<meta name="theme-color" content="#000">
+	<link rel="stylesheet" href="libs/swiper/swiper.min.css">
+	<link rel="stylesheet" href="styles/css/main.css">
+
+
+</head>
+
+<body>
+	<!-- <a href="#offer" class="pulse__btn">
+		<img src="img/anchor.png" alt="">
+	</a> -->
+	<header class="main">
+		<div class="main-wrap">
+			<p class="main__top">Эксклюзивный акупунктурный <br> коврик для домашнего массажа</p>
+			<img src="img/main_line.svg" alt="" class="main__vector">
+			<div class="price">
+				<s>118€</s>
+				<span>59€</span>
+			</div>
+		</div>
+		<div class="swiper-container main-slider">
+
+			<div class="swiper-wrapper">
+				<div class="swiper-slide main-slider__slide">
+					<div class="img-wrap"><img src="img/slide1.png" alt=""></div>
+				</div>
+				<div class="swiper-slide main-slider__slide">
+					<div class="img-wrap"><img src="img/slide2.png" alt=""></div>
+				</div>
+				<div class="swiper-slide main-slider__slide">
+					<div class="img-wrap"><img src="img/slide3.png" alt=""></div>
+				</div>
+				<div class="swiper-slide main-slider__slide">
+					<div class="img-wrap"><img src="img/slide4.png" alt=""></div>
+				</div>
+				<div class="swiper-slide main-slider__slide">
+					<div class="img-wrap"><img src="img/slide5.png" alt=""></div>
+				</div>
+			</div>
+			<div class="swiper-button-next main-slider__arrow main-slider__arrow--next"><img src="img/next.svg" alt=""></div>
+			<div class="swiper-button-prev main-slider__arrow main-slider__arrow--prev"><img src="img/prev.svg" alt=""></div>
+		</div>
+		<a href="#offer" class="btn"><span>ЗАКАЗАТЬ</span></a>
+	</header>
+
+	<section class="sect1">
+		<div class="sect1__content">
+			<div class="sect1__item">
+				<img src="img/builet1.svg" alt="">
+				<p>Снимает напряжение в <br> шее, спине, плечах, ногах</p>
+			</div>
+			<div class="sect1__item">
+				<img src="img/builet2.svg" alt="">
+				<p>Оздоровление<br> позвоночника</p>
+			</div>
+			<div class="sect1__item">
+				<img src="img/builet3.svg" alt="">
+				<p>Возвращает силы<br> организму</p>
+			</div>
+			<div class="sect1__item">
+				<img src="img/builet4.svg" alt="">
+				<p>Устраняет последствия<br> стресса</p>
+			</div>
+		</div>
+	</section>
+
+	<script src="libs/swiper/swiper.min.js"></script>
+	<script src="js/common.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap&subset=cyrillic" rel="stylesheet">
+
+	<script>
+		var linkNav = document.querySelectorAll('[href^="#"]'),
+			V = .2;
+		for (var i = 0; i < linkNav.length; i++) {
+			linkNav[i].addEventListener('click', function (e) {
+				e.preventDefault();
+				var w = window.pageYOffset,
+					hash = this.href.replace(/[^#]*(.*)/, '$1');
+				t = document.querySelector(hash).getBoundingClientRect().top,
+					start = null;
+				requestAnimationFrame(step);
+				function step(time) {
+					if (start === null) start = time;
+					var progress = time - start,
+						r = (t < 0 ? Math.max(w - progress / V, w + t) : Math.min(w + progress / V, w + t));
+					window.scrollTo(0, r);
+					if (r != w + t) {
+						requestAnimationFrame(step)
+					} else {
+						location.hash = hash
+					}
+				}
+			}, false);
+		}
+	</script>
+	<!-- <script>
+		(function () {
+			var input = document.querySelector('input[name="name"]');
+			input.addEventListener('input', function () {
+				input.value = input.value.replace(/[0-9]/g, '')
+			})
+		})()
+		var offer = document.getElementById('offer');
+		var btn = document.querySelector('.pulse__btn');
+		window.addEventListener('scroll', (e) => {
+			document.documentElement.scrollTop + 300 > offer.offsetTop ? btn.classList.add('show') : btn.classList.remove('show')
+			console.log(offer)
+		})
+	</script>-->
+</body>
+
+</html>

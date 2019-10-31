@@ -1,0 +1,71 @@
+@import "vars"
+@import "most"
+@import "offer"
+@import "reviews"
+@import "anim"
+
+.main-wrap
+  background-image: url(../../img/main_bg.png)
+  background-repeat: no-repeat
+  background-size: cover
+  height: 6.55rem
+  position: relative
+.main__top
+  margin: 0
+  text-align: center
+  font-weight: 500
+  color: $accent
+  line-height: 0.24rem
+  padding-top: 0.18rem
+.main__vector
+  position: absolute
+  top: 2.02rem
+  left: 0.14rem
+  width: 1.08rem
+.price
+  display: flex
+  flex-direction: column
+  padding-top: 2.4rem
+  padding-left: 0.3rem
+  color: #fff
+  font-weight: 500
+  font-size: 0.3rem
+  span
+    color: $accent
+    font-weight: 900
+    font-size: 0.45rem
+.main-slider
+  margin-top: -0.5rem
+  margin-bottom: 0.3rem
+.main-slider__slide
+  img
+    width: 2.3rem
+.main-slider__arrow
+  &:after
+    content: none
+  img
+    width: .58rem
+.main-slider__arrow--prev
+  left: 0.5rem
+.main-slider__arrow--next
+  right: 0.5rem
+
+.sect1__content
+  padding: .4rem 0
+.sect1__item
+  display: flex
+  position: relative
+  align-items: center
+  padding-left: 0.2rem
+  margin-bottom: 0.2rem
+  &:last-child
+    margin-bottom: 0
+  img
+    flex-shrink: 0
+    width: 4.4rem
+  p
+    position: absolute
+    left: 1.66rem
+    top: 49%
+    transform: translateY(-50%)
+    margin: 0

@@ -1,0 +1,123 @@
+
+
+  
+html
+  font-size: 20.83vw
+  @media (min-width: 480px)
+    font-size: 100px
+    overflow-x: hidden
+body
+  font-size: .20rem
+  max-width: 480px
+  margin: auto
+  position: relative
+  line-height: 1.4
+  font-weight: 300
+  font-family: 'Montserrat', sans-serif
+  color: #000
+  box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.18)
+  input, textarea
+    border: #666 .01rem solid
+    outline: none
+    &:focus:required:invalid
+      border-color: red
+    &:required:valid
+      border-color: green
+
+.img-wrap
+  display: flex
+  align-items: center
+  justify-content: center
+  img
+    width: 100%
+  &.pad
+    padding: 0 .2rem
+  &.mar
+    margin: .2rem 0
+
+.content
+  p
+    padding: 0 .25rem
+      right: 0.2rem
+    font-size: 0.25rem
+    font-weight: 300
+    line-height: 0.37rem
+    letter-spacing: 0.03em
+    &:last-child
+      margin-bottom: 0
+    b
+      font-weight: 500
+h2
+  font-size: 0.28rem
+  line-height: 0.43rem
+  font-weight: 300
+  text-transform: uppercase
+  color: $red
+  padding: .3rem .25rem
+  margin: 0
+  b
+    font-weight: 500
+.t-center
+  text-align: center
+.t-white
+  color: #fff
+
+.btn
+  display: block
+  width: 3.2rem
+  height: 0.95rem
+  margin: auto
+  text-transform: uppercase
+  animation: btn 3s linear infinite
+  font-weight: bold
+  font-size: 0.25rem
+  color: #fff
+  border: none
+  background-image: url(../../img/button.png)
+  background-size: cover
+  display: flex
+  align-items: center
+  justify-content: center
+  text-decoration: none
+  span
+    padding-bottom: 0.3rem
+    text-align: center
+.border__top
+  width: 4.8rem
+  position: absolute
+  top: -0.28rem
+  left: 0
+  right: 0
+.border__bot
+  width: 4.8rem
+  position: absolute
+  bottom: -0.28rem
+  left: 0
+  right: 0
+
+.pulse__btn
+  position: fixed
+  right: 0.1rem
+  display: inline-block
+  bottom: 0.1rem
+  z-index: 10
+  box-shadow: 0 0 0 rgba(11, 138, 44, 0.4)
+  width: 0.7rem
+  height: 0.7rem
+  border-radius: 50%
+  animation: pulse 2s infinite
+  transition: all .9s ease
+  &.show
+    right: -100%
+  img
+    width: 100%
+// animation
+@keyframes btn
+  0%
+    transform: scale(1)
+  50%
+    transform: scale(1.06)
+  100%
+    transform: scale(1)
+
+
