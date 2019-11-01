@@ -8,7 +8,7 @@ var swiper = new Swiper(".main-slider", {
   spaceBetween: 40
 });
 var reviews = new Swiper(".reviews__slider", {
-  autoHeight: true,
+  // autoHeight: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true
@@ -59,5 +59,4 @@ window.addEventListener("scroll", e => {
   document.documentElement.scrollTop + 300 > offer.offsetTop
     ? btn.classList.add("show")
     : btn.classList.remove("show");
-  console.log(offer);
 });
