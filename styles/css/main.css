@@ -499,9 +499,15 @@ input[type=number]::-webkit-outer-spin-button {
 
 .main-slider__arrow {
   outline: none;
+  border: none;
+  background: transparent;
 }
 
 .main-slider__arrow:after {
+  content: none;
+}
+
+.main-slider__arrow:before {
   content: none;
 }
 
