@@ -8,7 +8,7 @@ var swiper = new Swiper(".main-slider", {
   spaceBetween: 40
 });
 var reviews = new Swiper(".reviews__slider", {
-  // autoHeight: true,
+  autoHeight: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true

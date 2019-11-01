@@ -497,6 +497,10 @@ input[type=number]::-webkit-outer-spin-button {
   width: 2.3rem;
 }
 
+.main-slider__arrow {
+  outline: none;
+}
+
 .main-slider__arrow:after {
   content: none;
 }
