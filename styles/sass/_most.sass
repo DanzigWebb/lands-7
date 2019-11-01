@@ -34,34 +34,44 @@ body
     padding: 0 .2rem
   &.mar
     margin: .2rem 0
-
+section
+  padding-top: 0.35rem
 .content
   p
-    padding: 0 .25rem
-      right: 0.2rem
-    font-size: 0.25rem
-    font-weight: 300
-    line-height: 0.37rem
+    padding: 0 .15rem
+      right: 0.1rem
+    font-size: 0.2rem
+    line-height: 0.26rem
     letter-spacing: 0.03em
     &:last-child
       margin-bottom: 0
     b
       font-weight: 500
 h2
-  font-size: 0.28rem
+  font-size: 0.3rem
   line-height: 0.43rem
-  font-weight: 300
+  font-weight: 900
   text-transform: uppercase
-  color: $red
-  padding: .3rem .25rem
+  color: #fff
+  padding: .4rem .15rem
+    top: 0
   margin: 0
+  &.shadow
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5)
   b
     font-weight: 500
 .t-center
   text-align: center
-.t-white
+span.white
   color: #fff
-
+span.accent
+  color: #007095
+span.border
+  text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff
+  color: #127998
+span.border-acc
+  text-shadow: 0 1px 0 $accent, 0 -1px 0 $accent, 1px 0 0 $accent, -1px 0 0 $accent
+  color: #fff
 .btn
   display: block
   width: 3.2rem
@@ -74,6 +84,7 @@ h2
   color: #fff
   border: none
   background-image: url(../../img/button.png)
+  background-color: transparent
   background-size: cover
   display: flex
   align-items: center
